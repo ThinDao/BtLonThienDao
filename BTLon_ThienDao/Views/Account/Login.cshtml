@@ -1,0 +1,24 @@
+﻿@model BTLon_ThienDao.Models.Account
+<h1>DANG NHAP HE THONG</h1>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control"/>
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="DANG NHAP" class="btn btn-primary"/>
+                <span>Vui long @Html.ActionLink("DANG KY", "Register", "Account") neu chua co tai khoan</span>
+            </div>
+        </form>
+    </div>
+</div>
